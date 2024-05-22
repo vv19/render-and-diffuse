@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Render and Diffuse: Aligning Image and Action Spaces for Diffusion-based Behaviour Cloning">
-  <meta name="keywords" content="Imitation Learning">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Render and Diffuse</title>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Render and Diffuse">
+    <meta name="keywords" content="Imitation Learning, Diffusion Policy, Robot Manipulation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Render and Diffuse: Aligning Image and Action Spaces for Diffusion-based Behaviour Cloning</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
 </head>
 <body>
 
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Render and Diffuse: Aligning Image and Action Spaces for Diffusion-based Behaviour Cloning</h1>
-          <div class="is-size-5 publication-authors">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Render and Diffuse: Aligning Image and Action Spaces for
+                        Diffusion-based Behaviour Cloning</h1>
+                    <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a>Vitalis Vosylius</a>,</span>
-            </span>
-            <span class="author-block">
+                        </span>
+                        <span class="author-block">
               <a>Younggyo Seo</a>,</span>
-            </span>
-            <span class="author-block">
+                        </span>
+                        <span class="author-block">
               <a>Jafar Uruç</a>,</span>
-            </span>
-            <span class="author-block">
-              <a>Stephen James</a>,</span>
-            </span>
+                        </span>
+                        <span class="author-block">
+              <a>Stephen James</a></span>
+                        </span>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Dyson Robot Learning Lab</span>
-          </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">Dyson Robot Learning Lab</span>
+                        </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
                 <a href="https://arxiv.org/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -66,95 +67,139 @@
                 </a>
               </span>
 
-            </div>
+                            </div>
 
-          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+</section>
+
+<section class="hero is-light is-small">
+    <div class="hero-body">
+        <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item item-steve">
+                    <video poster="" id="steve" autoplay controls muted loop playsinline height="200%">
+                        <source src="./static/videos/Individual_Tasks/toilet_seat_down.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-chair-tp">
+                    <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="200%">
+                        <source src="./static/videos/Individual_Tasks/open_box.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-shiba">
+                    <video poster="" id="shiba" autoplay controls muted loop playsinline height="200%">
+                        <source src="./static/videos/Individual_Tasks/place_apple.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-fullbody">
+                    <video poster="" id="fullbody" autoplay controls muted loop playsinline height="200%">
+                        <source src="./static/videos/Individual_Tasks/sweep_cupboard.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-blueshirt">
+                    <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="200%">
+                        <source src="./static/videos/Individual_Tasks/open_drawer.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-mask">
+                    <video poster="" id="mask" autoplay controls muted loop playsinline height="200%">
+                        <source src="./static/videos/Individual_Tasks/close_drawer.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <h2 class="subtitle has-text-centered">
-</br>
-<p>TEST</p>
-<p>TEST</p>
+    </br>
+    <p> Videos presented above are composed of the actual images that the robot sees during the execution of the tasks
+        and our devised rendered action representation.
+        Observations from the shoulder and wrist cameras are shown on the left and right sides of each video,
+        respectively.
+        Different colours of the rendered grippers represent different action predictions in the future.</p>
 </h2>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/Individual_Tasks/toilet_seat_down.mp4"
-                    type="video/mp4">
-          </video>
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        In the field of Robot Learning, the complex mapping between high-dimensional observations such
+                        as RGB images and low-level robotic actions, two inherently very different spaces, constitutes a
+                        complex learning problem, especially with limited amounts of data. In this work, we introduce
+                        Render and Diffuse (R&D) a method that unifies low-level robot actions and RGB observations
+                        within the image space using virtual renders of the 3D model of the robot. Using this joint
+                        observation-action representation it computes low-level robot actions using a learnt diffusion
+                        process that iteratively updates the virtual renders of the robot. This space unification
+                        simplifies the learning problem and introduces inductive biases that are crucial for sample
+                        efficiency and spatial generalisation. We thoroughly evaluate several variants of R&D in
+                        simulation and showcase their applicability on six everyday tasks in the real world. Our results
+                        show that R&D exhibits strong spatial generalisation capabilities and is more sample efficient
+                        than more common image-to-action methods.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/Individual_Tasks/open_box.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/Individual_Tasks/place_apple.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/Individual_Tasks/sweep_cupboard.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/Individual_Tasks/open_drawer.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/Individual_Tasks/close_drawer.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            In the field of Robot Learning, the complex mapping between high-dimensional observations such as RGB images and low-level robotic actions, two inherently very different spaces, constitutes a complex learning problem, especially with limited amounts of data. In this work, we introduce Render and Diffuse (R&D) a method that unifies low-level robot actions and RGB observations within the image space using virtual renders of the 3D model of the robot. Using this joint observation-action representation it computes low-level robot actions using a learnt diffusion process that iteratively updates the virtual renders of the robot. This space unification simplifies the learning problem and introduces inductive biases that are crucial for sample efficiency and spatial generalisation. We thoroughly evaluate several variants of R&D in simulation and showcase their applicability on six everyday tasks in the real world. Our results show that R&D exhibits strong spatial generalisation capabilities and is more sample efficient than more common image-to-action methods.
-          </p>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Overview</h2>
+            </div>
+            <img src="./static/images/overview.png" class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            </br>
+            </br>
+            <p>
+                Overview of Render and Diffuse (R&D).
+            </p>
+            </br>
+
         </div>
-      </div>
-    </div>
 </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            Template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
-          </p>
-        </div>
-      </div>
+<section class="section" id="BibTeX">
+    <div class="container is-max-widescreen">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{,
+  author    = {},
+  title     = {},
+  journal   = {},
+  year      = {2024},
+}</code></pre>
     </div>
-  </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        Template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 </body>
