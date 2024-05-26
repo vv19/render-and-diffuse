@@ -76,6 +76,80 @@
         </div>
 </section>
 
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/promo.mp4"
+                        type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        In the field of Robot Learning, the complex mapping between high-dimensional observations such
+                        as RGB images and low-level robotic actions, two inherently very different spaces, constitutes a
+                        complex learning problem, especially with limited amounts of data. In this work, we introduce
+                        Render and Diffuse (R&D) a method that unifies low-level robot actions and RGB observations
+                        within the image space using virtual renders of the 3D model of the robot. Using this joint
+                        observation-action representation it computes low-level robot actions using a learnt diffusion
+                        process that iteratively updates the virtual renders of the robot. This space unification
+                        simplifies the learning problem and introduces inductive biases that are crucial for sample
+                        efficiency and spatial generalisation. We thoroughly evaluate several variants of R&D in
+                        simulation and showcase their applicability on six everyday tasks in the real world. Our results
+                        show that R&D exhibits strong spatial generalisation capabilities and is more sample efficient
+                        than more common image-to-action methods.
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-widescreen">
+
+        <div class="rows">
+            <!-- Animation. -->
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3">Render and Diffuse</h2>
+
+                    <div class="content has-text-justified">
+                        <!-- <br> -->
+                    </div>
+                    <img src="static/images/overview.png" class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    </br>
+                    </br>
+                    <p>
+                        Overview of Render and Diffuse (R&D). We introduce a strategy that unifies image and
+                        action domains within a single image space \(I\), simplifying the learning process by reducing
+                        the complexity of navigating between these different spaces. This approach uses a rendering
+                        procedure and a known model of the robot to visually 'imagine' the spatial implications of the
+                        robot's actions. Through a learned denoising process, these rendered actions are updated until
+                        they closely align with the actions observed during the demonstrations. The architecture employs
+                        a Transformer model, where different positional embeddings are added to the tokenized input. These
+                        token embeddings are processed with several self-attention layers and then decoded into
+                        per-camera denoising directions in the image space, gripper actions, and noise added to the
+                        ground truth actions in the action space.
+                    </p>
+                    </br>
+
+                </div>
+            </div>
+        </div>
+</section>
+
 <section class="hero is-light is-small">
     <div class="hero-body">
         <div class="container">
@@ -120,7 +194,7 @@
         </div>
         <div class="content has-text-justified">
             <p class="subtitle has-text-centered">
-                Videos presented above are composed of the actual images that the robot sees during the execution of the
+                Videos are composed of the actual images that the robot sees during the execution of the
                 tasks and our devised rendered action representation.
             </p>
             <p class="subtitle has-text-centered">
@@ -133,60 +207,6 @@
 
         </div>
     </div>
-</section>
-
-
-<section class="section">
-    <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Abstract</h2>
-                <div class="content has-text-justified">
-                    <p>
-                        In the field of Robot Learning, the complex mapping between high-dimensional observations such
-                        as RGB images and low-level robotic actions, two inherently very different spaces, constitutes a
-                        complex learning problem, especially with limited amounts of data. In this work, we introduce
-                        Render and Diffuse (R&D) a method that unifies low-level robot actions and RGB observations
-                        within the image space using virtual renders of the 3D model of the robot. Using this joint
-                        observation-action representation it computes low-level robot actions using a learnt diffusion
-                        process that iteratively updates the virtual renders of the robot. This space unification
-                        simplifies the learning problem and introduces inductive biases that are crucial for sample
-                        efficiency and spatial generalisation. We thoroughly evaluate several variants of R&D in
-                        simulation and showcase their applicability on six everyday tasks in the real world. Our results
-                        show that R&D exhibits strong spatial generalisation capabilities and is more sample efficient
-                        than more common image-to-action methods.
-                    </p>
-                </div>
-            </div>
-        </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-widescreen">
-
-    <div class="rows">
-    <!-- Animation. -->
-    <div class="rows is-centered ">
-      <div class="row is-full-width">
-        <h2 class="title is-3">Render and Diffuse</h2>
-
-        <div class="content has-text-justified">
-        <!-- <br> -->
-        </div>
-        <img src="static/images/overview.png" class="interpolation-image"
-         alt="Interpolate start reference image." />
-        </br>
-        </br>
-          <p>
-              Overview of Render and Diffuse (R&D).
-          </p>
-        </br>
-
-      </div>
-    </div>
-  </div>
 </section>
 
 
