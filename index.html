@@ -58,22 +58,22 @@
                             <span class="author-block">Work done during an internship at the Dyson Robot Learning Lab.</span>
                         </div>
 
-                        <div class="column has-text-centered">
-                            <div class="publication-links">
-                                <!-- PDF Link. -->
-                                <span class="link-block">
-                <a href="https://arxiv.org/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
+<!--                        <div class="column has-text-centered">-->
+<!--                            <div class="publication-links">-->
+<!--                                &lt;!&ndash; PDF Link. &ndash;&gt;-->
+<!--                                <span class="link-block">-->
+<!--                <a href="https://arxiv.org/"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                  </span>-->
+<!--                  <span>Paper</span>-->
+<!--                </a>-->
+<!--              </span>-->
 
-                            </div>
+<!--                            </div>-->
 
-                        </div>
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -137,12 +137,13 @@
                     </br>
                     <p>
                         Overview of Render and Diffuse (R&D). We introduce a strategy that unifies image and
-                        action domains within a single image space \(I\), simplifying the learning process by reducing
+                        action domains within a single image space (I), simplifying the learning process by reducing
                         the complexity of navigating between these different spaces. This approach uses a rendering
                         procedure and a known model of the robot to visually 'imagine' the spatial implications of the
                         robot's actions. Through a learned denoising process, these rendered actions are updated until
                         they closely align with the actions observed during the demonstrations. The architecture employs
-                        a Transformer model, where different positional embeddings are added to the tokenized input. These
+                        a Transformer model, where different positional embeddings are added to the tokenized input.
+                        These
                         token embeddings are processed with several self-attention layers and then decoded into
                         per-camera denoising directions in the image space, gripper actions, and noise added to the
                         ground truth actions in the action space.
@@ -158,38 +159,95 @@
     <div class="hero-body">
         <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-steve">
-                    <video poster="" id="steve" autoplay controls muted loop playsinline height="200%">
+                <div class="item item-toilet_3">
+                    <video poster="" id="toilet_3" autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/Individual_Tasks/1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-box_3">
+                    <video poster="" id="box_3" autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/Individual_Tasks/2.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-sweep_3">
+                    <video poster="" id="sweep_3" autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/Individual_Tasks/3.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-apple_3">
+                    <video poster="" id="apple_3" autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/Individual_Tasks/4.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-open_3">
+                    <video poster="" id="open_3" autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/Individual_Tasks/5.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-close_3">
+                    <video poster="" id="close_3" autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/Individual_Tasks/6.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="content has-text-justified">
+            <p class="subtitle has-text-centered">
+                Videos are composed of the actual images that the robot sees during the execution of the
+                tasks and our devised rendered action representation.
+                <br>
+                Observations from the shoulder and wrist cameras are shown on the left and right sides of each video,
+                respectively.
+                <br>
+                Different colours of the rendered grippers represent different action predictions in the future.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light is-small">
+    <div class="hero-body">
+        <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item item-toilet">
+                    <video poster="" id="toilet" autoplay controls muted loop playsinline height="200%">
                         <source src="./static/videos/Individual_Tasks/toilet_seat_down.mp4"
                                 type="video/mp4">
                     </video>
                 </div>
-                <div class="item item-chair-tp">
-                    <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="200%">
+                <div class="item item-box">
+                    <video poster="" id="box" autoplay controls muted loop playsinline height="200%">
                         <source src="./static/videos/Individual_Tasks/open_box.mp4"
                                 type="video/mp4">
                     </video>
                 </div>
-                <div class="item item-shiba">
-                    <video poster="" id="shiba" autoplay controls muted loop playsinline height="200%">
+                <div class="item item-apple">
+                    <video poster="" id="apple" autoplay controls muted loop playsinline height="200%">
                         <source src="./static/videos/Individual_Tasks/place_apple.mp4"
                                 type="video/mp4">
                     </video>
                 </div>
-                <div class="item item-fullbody">
-                    <video poster="" id="fullbody" autoplay controls muted loop playsinline height="200%">
+                <div class="item item-sweep">
+                    <video poster="" id="sweep" autoplay controls muted loop playsinline height="200%">
                         <source src="./static/videos/Individual_Tasks/sweep_cupboard.mp4"
                                 type="video/mp4">
                     </video>
                 </div>
-                <div class="item item-blueshirt">
-                    <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="200%">
+                <div class="item item-open">
+                    <video poster="" id="open" autoplay controls muted loop playsinline height="200%">
                         <source src="./static/videos/Individual_Tasks/open_drawer.mp4"
                                 type="video/mp4">
                     </video>
                 </div>
-                <div class="item item-mask">
-                    <video poster="" id="mask" autoplay controls muted loop playsinline height="200%">
+                <div class="item item-close">
+                    <video poster="" id="close" autoplay controls muted loop playsinline height="200%">
                         <source src="./static/videos/Individual_Tasks/close_drawer.mp4"
                                 type="video/mp4">
                     </video>
@@ -212,17 +270,17 @@
 </section>
 
 
-<section class="section" id="BibTeX">
-    <div class="container is-max-widescreen">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{,
-  author    = {},
-  title     = {},
-  journal   = {},
-  year      = {2024},
-}</code></pre>
-    </div>
-</section>
+<!--<section class="section" id="BibTeX">-->
+<!--    <div class="container is-max-widescreen">-->
+<!--        <h2 class="title">BibTeX</h2>-->
+<!--        <pre><code>@article{,-->
+<!--  author    = {},-->
+<!--  title     = {},-->
+<!--  journal   = {},-->
+<!--  year      = {2024},-->
+<!--}</code></pre>-->
+<!--    </div>-->
+<!--</section>-->
 
 <footer class="footer">
     <div class="container">
